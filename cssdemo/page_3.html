@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style>
+
+		html { 
+			background: url(lambs.jpg) no-repeat center center fixed; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+
+		#page-wrap {
+			width: 600px;
+			margin: 50px auto;
+			padding: 20px;
+			background: white;
+			-moz-box-shadow: 0 0 20px black;
+			-webkit-box-shadow: 0 0 20px black;
+			box-shadow: 0 0 20px black;
+		}
+
+		h4 {
+			font-size:36px;
+			text-decoration:underline;
+			font-family:impact, sans-serif;
+		}
+
+		#highlight {
+			color:red;
+		}
+
+		.large {
+		    font-size:24px;
+		}
+
+        *{font-family:"Trebuchet MS";}
+        code {font-family:monospace;}
+
+	</style>
+</head>
+
+<body>
+<div id="page-wrap">
+
+
+	<h2>Changing text</h2>
+
+    <hr>
+	<h3>Changing every time</h3>
+
+	<h4>This header is in a different font</h4>
+    <p>For example, to get all &lt;h4&gt; headers to change to look like the header above, put this in the <code>&lt;style&gt;</code> block:</p>
+    <pre><code>
+	h4 {
+		font-size:36px;
+		text-decoration:underline;
+		font-family:impact, sans-serif;
+	}
+	</code></pre>
+
+    <hr>
+	<h3>Changing just one</h3>
+
+	<p>If you want to change just one thing...</p>
+
+	<p id="highlight">For example to get this line of text to change colour, but no other.</p>
+
+    <p>Put this in the <code>&lt;style&gt;</code> block:</p>
+    <pre><code>
+	#highlight {
+		color:red;
+	}
+	</code></pre>
+
+	<p>And write your line of text like this:</p>
+
+    <pre><code>
+	&lt;p id="highlight"&gt;For example to get this line of
+	 text to change colour, but no other.&lt;/p&gt;
+	</code></pre>
+
+    <hr>
+	<h3>Changing just more than one, but not every</h3>
+
+	<p>If you want to change a few things, but not everything, like this:</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="large">This is large </span></p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="large">This is large </span></p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;This is not large </p>
+
+    <p>Put this in the <code>&lt;style&gt;</code> block:</p>
+    <pre><code>
+    .large {
+        font-size:24px;
+    }
+    </code></pre>
+
+    <p>And write your lines of text like this:</p>
+
+    <pre><code>
+    &lt;p class="large"&gt; This is large &lt;/p&gt;
+    &lt;p class="large"&gt; This is large &lt;/p&gt;
+    &lt;p&gt; This is not large &lt;/p&gt;
+    </code></pre>
+
+    <hr>
+	<p> This is page 3 (page_3.html).</p>
+	<a href="page_2.html">< Back</a>  <a href="page_4.html">Next &gt;</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <style>
+
+        html { 
+            background: url(beach.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        #page-wrap {
+            width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            -moz-box-shadow: 0 0 20px black;
+            -webkit-box-shadow: 0 0 20px black;
+            box-shadow: 0 0 20px black;
+        }
+
+        /* This section makes pop-up text. */
+
+        a.hideDisplay{
+          position: relative; /*this is the key*/
+          z-index: 24; 
+          color: #000;
+          text-decoration: none
+        }
+          
+        a.hideDisplay:hover{
+          z-index: 25; 
+        }
+
+        a.hideDisplay span.showDisplayOnHover{
+          display: none
+        }
+
+        /* This will only display itself when the
+         * user hovers the mouse over the anchor. */
+        a.hideDisplay:hover span.showDisplayOnHover{ 
+          display: block;
+          position: absolute;
+          font-size: 18px;
+          
+          /* This sets the height of a line of text in the box. */
+          line-height: 25px;
+          
+          /* These position the box where it needs to go. */
+          top: 5px; 
+          left: 20px; 
+          
+          /* These adjust the size of the box when it appears. */
+          width: 200px;
+          padding: 10px;
+          
+          border: 1px solid #666666;
+          background-color: #c0cedd; 
+          
+          /* text color */
+          color: #000000;
+          text-align: left;
+        }
+
+        span.showBodyOfDisplayOnHover {
+          font-size: 16px; 
+          font-weight: normal;
+          color: #444;
+          line-height: 18px; 
+        }
+        /* end pop-up text section */
+
+		*{font-family:"Trebuchet MS";}
+		code {font-family:monospace;}
+
+		#hovertext {
+			color:blue;
+			font-weight: bold;
+		}
+
+    </style>
+</head>
+
+<body>
+<div id="page-wrap">
+
+
+    <h2>Pop up text</h2>
+    <hr>
+
+    This is complicated! I got the answer from <a href="http://www.robinsonprogramming.com/tutorials_html_css/pop_up_text.html">here</a>.
+
+    <p>
+    <a class="hideDisplay" id="hovertext">Hover your mouse over this sentence to see a pop-up caption.  
+        <span class="showDisplayOnHover">
+            Pop-Up Text<br>
+            <span class="showBodyOfDisplayOnHover">
+                Hello! This is the pop up text!
+            </span>
+        </span>
+    </a>
+    </p>
+
+
+    <p>Put this in the <code>&lt;style&gt;</code> block:</p>
+    <pre><code>
+    a.hideDisplay{
+      position: relative; /*this is the key*/
+      z-index: 24; 
+      color: #000;
+      text-decoration: none
+    }
+      
+    a.hideDisplay:hover{
+      z-index: 25; 
+    }
+
+    a.hideDisplay span.showDisplayOnHover{
+      display: none
+    }
+
+    /* This will only display itself when the
+     * user hovers the mouse over the anchor. */
+    a.hideDisplay:hover span.showDisplayOnHover{ 
+      display: block;
+      position: absolute;
+      font-size: 18px;
+      
+      /* This sets the height of a line of text in the box. */
+      line-height: 25px;
+      
+      /* These position the box where it needs to go. */
+      top: 5px; 
+      left: 20px; 
+      
+      /* These adjust the size of the box when it appears. */
+      width: 200px;
+      padding: 10px;
+      
+      border: 1px solid #666666;
+      background-color: #c0cedd; 
+      
+      /* text color */
+      color: #000000;
+      text-align: left;
+    }
+
+    span.showBodyOfDisplayOnHover {
+      font-size: 16px; 
+      font-weight: normal;
+      color: #444;
+      line-height: 18px; 
+    }
+    </code></pre>
+
+    <p>Put this in the <code>&lt;body&gt;</code> block:</p>
+    <pre><code>
+    &lt;p&gt;
+    &lt;a class="hideDisplay"&gt;Hover your mouse over this sentence
+    to see a pop-up caption.  
+        &lt;span class="showDisplayOnHover"&gt;
+            Pop-Up Text&lt;br&gt;
+            &lt;span class="showBodyOfDisplayOnHover"&gt;
+                Hello! This is the pop up text!
+            &lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/a&gt;
+    &lt;/p&gt;
+    </code></pre>
+
+
+	<hr>
+	<p> This is page 4 (page_4.html).</p>
+    <a href="page_3.html">< Back</a> <a href="page_5.html">Next &gt;</a>
+
+</div>
+
+</body>
+</html>
