@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Fireworks </title>
+<style>
+
+h1 { color:Red;
+     text-align: center;}
+
+html {background: url(fireworksforwebsite.jpg) no-repeat center center fixed; 
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;}
